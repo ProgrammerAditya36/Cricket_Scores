@@ -35,10 +35,6 @@ const Upload = () => {
             })
             .then((response) => {
                 setSuccessMessage("Update successful!");
-                setTimeout(() => {
-                    setSuccessMessage("");
-                    navigate("/"); // Navigate to "/"
-                }, 1000);
             })
             .catch((error) => {
                 console.error("Error updating data:", error);
