@@ -34,7 +34,7 @@ const Upload = () => {
                 wickets: newWickets,
             })
             .then((response) => {
-                setSuccessMessage("Update successful!");
+                navigate("/");
             })
             .catch((error) => {
                 console.error("Error updating data:", error);
