@@ -2,8 +2,13 @@ const express = require('express')
 const cors = require('cors')
 const User = require('./db').User
 const app = express()
+app.use(cors({
+    origin:['https://cricket-scores-api.vercel.app/','http://localhost:3000/'],
+    methods:['GET','POST','PUT'],
+    credentials: true
+}));
 app.use(express.json())
-app.use(cors())
+
 app.get('/', async(req, res) => {
     const data = await User.find();
     res.send(data);

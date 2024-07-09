@@ -5,7 +5,7 @@ import React from "react";
 import useData from "./hooks/useData";
 import { useNavigate } from "react-router-dom";
 function Scores() {
-    const data = useData("http://localhost:3000");
+    const data = useData("https://cricket-scores-api.vercel.app/");
     const navigate = useNavigate();
     if (!data.loading) {
         const scores = data.data;

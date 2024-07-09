@@ -29,7 +29,7 @@ const Upload = () => {
         const newRuns = runs + curRuns;
         const newWickets = wickets + curWickets;
         axios
-            .put(`http://localhost:3000/${id}`, {
+            .put(`https://cricket-scores-api.vercel.app/${id}`, {
                 runs: newRuns,
                 wickets: newWickets,
             })
