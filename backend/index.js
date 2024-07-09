@@ -3,7 +3,7 @@ const cors = require('cors')
 const User = require('./db').User
 const app = express()
 app.use(cors({
-    origin:['https://cricket-scores-api.vercel.app/','http://localhost:3000/'],
+    origin:"*",
     methods:['GET','POST','PUT'],
     credentials: true
 }));
