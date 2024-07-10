@@ -22,6 +22,14 @@ app.post('/',async(req, res) => {
     await user.save();
     res.send(user);
 });
+app.put('/', async(req, res) => {
+    const data = req.body;
+    console.log(data);
+    data.forEach(async(user) => {
+        await User.findByIdAndUpdate(user._id, user);
+    }); 
+    res.json("message: 'Users updated successfully'");
+});
 app.put('/:id', async(req, res) => {
     const user= await User.findByIdAndUpdate(req.params.id, req.body);
     res.json("message: 'User updated successfully'");

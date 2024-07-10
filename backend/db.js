@@ -3,7 +3,8 @@ mongoose.connect('mongodb+srv://admin:232004Aditya%40mongo@cluster0.dahrvb8.mong
 const UserSchema = new mongoose.Schema({
     name: String,
     runs: Number,
-    wickets: Number
+    wickets: Number,
+    catches: Number,
 });
 const User = mongoose.model('User', UserSchema);
 exports.User = User;
