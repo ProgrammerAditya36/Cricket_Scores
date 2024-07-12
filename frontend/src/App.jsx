@@ -5,13 +5,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Scores from "./Scores";
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Scores />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Scores />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
